@@ -1,0 +1,25 @@
+-- Table: public.monitoring_value
+
+-- DROP TABLE IF EXISTS public.monitoring_value;
+
+CREATE TABLE IF NOT EXISTS public.monitoring_value
+(
+    reading_id integer NOT NULL DEFAULT nextval('monitoring_value_reading_id_seq'::regclass),
+    station_id smallint NOT NULL,
+    read_at timestamp with time zone NOT NULL,
+    rpm smallint NOT NULL,
+    volt_reading numeric NOT NULL,
+    current_reading numeric NOT NULL,
+    watt_reading numeric NOT NULL,
+    temperature numeric NOT NULL,
+    CONSTRAINT monitoring_value_pkey PRIMARY KEY (reading_id),
+    CONSTRAINT monitoring_value_station_id_fkey FOREIGN KEY (station_id)
+        REFERENCES public.power_station (station_id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.monitoring_value
+    OWNER to postgres;
