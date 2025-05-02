@@ -1,0 +1,16 @@
+-- Table: public.power_station
+
+-- DROP TABLE IF EXISTS public.power_station;
+
+CREATE TABLE IF NOT EXISTS public.power_station
+(
+    station_id integer NOT NULL DEFAULT nextval('power_station_station_id_seq'::regclass),
+    location character varying(50) COLLATE pg_catalog."default",
+    installation_date date,
+    CONSTRAINT power_station_pkey PRIMARY KEY (station_id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.power_station
+    OWNER to postgres;
