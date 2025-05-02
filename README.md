@@ -6,7 +6,7 @@
 
 The code in the repository contains all the files needed to operate the monitoring system for the FEC Hydroelectric Power Generation System. Below contains the preliminary setup guide for Node RED.
 
-# Initial Setup
+## Initial Setup
 To start setting up the Node RED interface, the hosting computer must have Node-RED installed.  
 [Node-RED Local Installation Guide](https://nodered.org/docs/getting-started/local)
 
@@ -26,3 +26,7 @@ Once inside the interface, click on the top right 3 bars, and select "Import"
 </p>
 
 The json code in the file [HydroPowerGenerationFlow.json](HydroPowerGenerationFlow.json) can be copied into the window to import the interface.
+
+## SQL Database Setup
+
+To setup the databse connection, pgAdmin was used. The two files [MonitoringTableScript](MonitoringTableScript) and [PowerStationScript](PowerStationScript) are the two tables created to store all the data collected in the system.
