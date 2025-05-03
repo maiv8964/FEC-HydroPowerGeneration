@@ -1,4 +1,4 @@
-# Siphon-Action Hydroelectric Power Plant Arduion Monitoring System
+# Siphon-Action Hydroelectric Power Plant Arduino Monitoring System
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/ac893e2a-7d1a-405e-95d2-84acbe499238" />
